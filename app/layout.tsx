@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import "./globals.css"
+
 import { ThemeProvider } from "@/components/theme-provider"
 import { Navbar } from "@/components/navbar"
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
-      <body className={`${inter.className} font-sans antialiased min-h-screen bg-background text-foreground transition-colors duration-300`}>
+      <body className={`${inter.className} font-sans antialiased min-h-screen bg-background text-foreground transition-colors duration-300 w-screen flex items-center justify-center`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -26,7 +26,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          {children}
+          Soon...
         </ThemeProvider>
       </body>
     </html>
